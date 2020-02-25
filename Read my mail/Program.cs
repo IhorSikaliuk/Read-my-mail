@@ -15,11 +15,10 @@ namespace Read_my_mail
             int port = 993;
             string login = "aw33@ukr.net";
             int numberOfMails = 3;  //Кількість повідомлення для читання
-            ImapClient client = new ImapClient();
-
-            Console.Write ("Password: ");
+            Console.Write("Password: ");
             string password = Console.ReadLine();
-
+            ImapClient client = new ImapClient();
+            
             try
             {
                 client.Connect (server, port, useSsl: true);    //Підключення до серверу та аунтифікація
